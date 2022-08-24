@@ -36,6 +36,7 @@ document.getElementById("key-pad").addEventListener("click", (event) => {
   }
 });
 
+// Pin Matcher Verify
 function verifyPin() {
   const pin = document.getElementById("pingenerate").value;
   const typeNumber = document.getElementById("typed-numbers").value;
