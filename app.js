@@ -35,3 +35,7 @@ document.getElementById("key-pad").addEventListener("click", (event) => {
     calInput.value = newNumber;
   }
 });
+
+function verifyPin() {
+  const pin = document.getElementById("typed-number");
+}
