@@ -24,7 +24,7 @@ function getPin() {
 
 document.getElementById("key-pad").addEventListener("click", (event) => {
   const number = event.target.innerText;
-  const calInput = document.getElementById("typed-number");
+  const calInput = document.getElementById("typed-numbers");
   if (isNaN(number)) {
     if (number == "C") {
       calInput.value = "";
@@ -37,5 +37,15 @@ document.getElementById("key-pad").addEventListener("click", (event) => {
 });
 
 function verifyPin() {
-  const pin = document.getElementById("typed-number");
+  const pin = document.getElementById("pingenerate").value;
+  const typeNumber = document.getElementById("typed-numbers").value;
+  const notifySuccess = document.getElementById("notify-success");
+  const failError = document.getElementById("notify-fail");
+  if (pin == typeNumber) {
+    notifySuccess.style.display = "block";
+    failError.style.display = "none";
+  } else {
+    notifySuccess.style.display = "none";
+    failError.style.display = "block";
+  }
 }
